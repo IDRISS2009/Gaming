@@ -1,0 +1,234 @@
+/* Settings Page Styles */
+.settings-page {
+    padding-bottom: 2rem;
+  }
+  
+  .settings-container {
+    display: flex;
+    background: linear-gradient(135deg, var(--zinc-800), var(--zinc-900));
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .settings-nav {
+    width: 200px;
+    background: linear-gradient(135deg, var(--zinc-900), var(--zinc-950));
+    padding: 1rem 0;
+  }
+  
+  .settings-nav-item {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--nebula-gray);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .settings-nav-item:hover,
+  .settings-nav-item.active {
+    background: linear-gradient(90deg, var(--neon-blue), transparent);
+    color: var(--star-white);
+  }
+  
+  .settings-content {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .settings-section {
+    display: none;
+  }
+  
+  .settings-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .settings-section h2 {
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .setting-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .setting-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--star-white);
+  }
+  
+  .setting-item input[type="text"],
+  .setting-item input[type="email"],
+  .setting-item input[type="password"],
+  .setting-item select {
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--zinc-800);
+    border: 1px solid var(--zinc-700);
+    border-radius: var(--border-radius);
+    color: var(--star-white);
+  }
+  
+  .setting-item input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .setting-item input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  /* Switch styles */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--zinc-700);
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--star-white);
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--neon-blue);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* Avatar preview */
+  .avatar-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Buttons */
+  .change-password-btn,
+  .danger-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .change-password-btn {
+    background-color: var(--neon-blue);
+    color: var(--star-white);
+  }
+  
+  .change-password-btn:hover {
+    background-color: var(--neon-purple);
+  }
+  
+  .danger-btn {
+    background-color: #ff3d00;
+    color: var(--star-white);
+  }
+  
+  .danger-btn:hover {
+    background-color: #ff6333;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .settings-container {
+      flex-direction: column;
+    }
+  
+    .settings-nav {
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+      padding: 1rem;
+    }
+  
+    .settings-nav-item {
+      flex: 0 0 auto;
+      padding: 0.5rem 1rem;
+    }
+  
+    .settings-content {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .setting-item input[type="color"] {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .change-password-btn,
+    .danger-btn {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  

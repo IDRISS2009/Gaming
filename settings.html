@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Cosmic Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark">
+    <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="mobile-nav" class="mobile-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+            <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="friends.html"><i class="fas fa-users"></i> Friends</a></li>
+            <li><a href="stats.html"><i class="fas fa-chart-bar"></i> Stats</a></li>
+            <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard">
+        <!-- Sidebar (same as in previous pages) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+              <div class="logo">
+                <div class="logo-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <span class="logo-text">NEXUS</span>
+              </div>
+              <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+            
+            <nav class="sidebar-menu">
+              <ul>
+                <li class="active">
+                  <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="games.html">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Games</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="achievements.html">
+                    <i class="fas fa-trophy"></i>
+                    <span>Achievements</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="friends.html">
+                    <i class="fas fa-users"></i>
+                    <span>Friends</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+              <div class="user-profile">
+                <div class="avatar">
+                  <img src="https://placehold.co/40x40" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                  <span class="user-name">John Doe</span>
+                  <span class="user-level">Level 42</span>
+                </div>
+                <button class="logout-btn">
+                  <i class="fas fa-sign-out-alt"></i>
+                </button>
+              </div>
+            </div>
+          </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 class="page-title">Cosmic Settings</h1>
+            </header>
+
+            <div class="content-wrapper settings-page">
+                <section class="settings-container">
+                    <div class="settings-nav">
+                        <button class="settings-nav-item active" data-target="appearance">Appearance</button>
+                        <button class="settings-nav-item" data-target="account">Account</button>
+                        <button class="settings-nav-item" data-target="notifications">Notifications</button>
+                        <button class="settings-nav-item" data-target="privacy">Privacy</button>
+                        <button class="settings-nav-item" data-target="accessibility">Accessibility</button>
+                        <button class="settings-nav-item" data-target="advanced">Advanced</button>
+                    </div>
+
+                    <div class="settings-content">
+                        <div id="appearance" class="settings-section active">
+                            <h2>Appearance</h2>
+                            <div class="setting-item">
+                                <label for="theme-select">Theme</label>
+                                <select id="theme-select">
+                                    <option value="dark">Dark</option>
+                                    <option value="light">Light</option>
+                                    <option value="cosmic">Cosmic</option>
+                                    <option value="neon">Neon</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label for="primary-color">Primary Color</label>
+                                <input type="color" id="primary-color" value="#00f3ff">
+                            </div>
+                            <div class="setting-item">
+                                <label for="accent-color">Accent Color</label>
+                                <input type="color" id="accent-color" value="#9d00ff">
+                            </div>
+                            <div class="setting-item">
+                                <label for="font-size">Font Size</label>
+                                <input type="range" id="font-size" min="12" max="24" step="1" value="16">
+                                <span id="font-size-value">16px</span>
+                            </div>
+                            <div class="setting-item">
+                                <label for="animation-toggle">Enable Animations</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="animation-toggle" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="account" class="settings-section">
+                            <h2>Account</h2>
+                            <div class="setting-item">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" value="CosmicPlayer">
+                            </div>
+                            <div class="setting-item">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="cosmic.player@example.com">
+                            </div>
+                            <div class="setting-item">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" value="••••••••">
+                                <button class="change-password-btn">Change Password</button>
+                            </div>
+                            <div class="setting-item">
+                                <label for="avatar">Avatar</label>
+                                <div class="avatar-preview">
+                                    <img src="https://placehold.co/100x100" alt="User Avatar" id="avatar-img">
+                                </div>
+                                <input type="file" id="avatar" accept="image/*">
+                            </div>
+                        </div>
+
+                        <div id="notifications" class="settings-section">
+                            <h2>Notifications</h2>
+                            <div class="setting-item">
+                                <label for="email-notifications">Email Notifications</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="email-notifications" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label for="push-notifications">Push Notifications</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="push-notifications" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label for="friend-requests">Friend Requests</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="friend-requests" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label for="achievement-alerts">Achievement Alerts</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="achievement-alerts" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="privacy" class="settings-section">
+                            <h2>Privacy</h2>
+                            <div class="setting-item">
+                                <label for="profile-visibility">Profile Visibility</label>
+                                <select id="profile-visibility">
+                                    <option value="public">Public</option>
+                                    <option value="friends">Friends Only</option>
+                                    <option value="private">Private</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label for="activity-sharing">Activity Sharing</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="activity-sharing" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label for="friend-list-visibility">Friend List Visibility</label>
+                                <select id="friend-list-visibility">
+                                    <option value="public">Public</option>
+                                    <option value="friends">Friends Only</option>
+                                    <option value="private">Private</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="accessibility" class="settings-section">
+                            <h2>Accessibility</h2>
+                            <div class="setting-item">
+                                <label for="high-contrast">High Contrast Mode</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="high-contrast">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label for="text-to-speech">Text-to-Speech</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="text-to-speech">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label for="keyboard-shortcuts">Enable Keyboard Shortcuts</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="keyboard-shortcuts" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="advanced" class="settings-section">
+                            <h2>Advanced</h2>
+                            <div class="setting-item">
+                                <label for="language-select">Language</label>
+                                <select id="language-select">
+                                    <option value="en">English</option>
+                                    <option value="es">Español</option>
+                                    <option value="fr">Français</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="ja">日本語</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label for="data-saver">Data Saver Mode</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="data-saver">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label for="auto-update">Auto-Update</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="auto-update" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <button id="clear-cache" class="danger-btn">Clear Cache</button>
+                            </div>
+                            <div class="setting-item">
+                                <button id="delete-account" class="danger-btn">Delete Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
+

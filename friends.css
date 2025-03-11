@@ -1,0 +1,346 @@
+/* Friends Page Styles */
+.friends-page {
+    padding-bottom: 2rem;
+  }
+  
+  /* Friend Overview */
+  .friend-overview {
+    margin-bottom: 2rem;
+  }
+  
+  .friend-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .stat-card {
+    background: #6F71A1;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+
+  .stat-card:first-child {
+    background: #009ea3;
+  }
+
+
+  .stat-card:last-child {
+    background: #5AA5CD;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .stat-icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
+    color: var(--star-white);
+  }
+  
+  .stat-info h3 {
+    font-size: 1rem;
+    color: var(--nebula-gray);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-info p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--star-white);
+  }
+  
+  /* Friend Activity Feed */
+  .friend-activity {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: var(--neon-blue);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, cyan, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+  .activity-feed {
+    background: linear-gradient(135deg, var(--zinc-800), var(--zinc-900));
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .activity-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--zinc-700);
+    transition: background-color 0.3s ease;
+  }
+  
+  .activity-item:last-child {
+    border-bottom: none;
+  }
+  
+  .activity-item:hover {
+    background-color: var(--zinc-800);
+  }
+  
+  .activity-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    overflow: hidden;
+  }
+  
+  .activity-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .activity-content {
+    flex: 1;
+  }
+  
+  .activity-user {
+    font-weight: 700;
+    color: #49c2ff;
+  }
+  
+  .activity-action {
+    color: var(--nebula-gray);
+  }
+  
+  .activity-time {
+    font-size: 0.8rem;
+    color: var(--zinc-500);
+  }
+  
+  /* Friend List */
+  .friend-list {
+    margin-bottom: 3rem;
+    display: none;
+  }
+  
+  .friend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .friend-card {
+    background: linear-gradient(135deg, var(--zinc-800), var(--zinc-900));
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .friend-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, transparent, transparent, var(--neon-blue));
+    animation: rotate 4s linear infinite;
+  }
+  
+  .friend-card::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: linear-gradient(135deg, var(--zinc-800), var(--zinc-900));
+    border-radius: calc(var(--border-radius) - 3px);
+  }
+  
+  .friend-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 243, 255, 0.2);
+  }
+  
+  .friend-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .friend-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .friend-name {
+    font-size: 1.2rem;
+    color: var(--star-white);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .friend-status {
+    font-size: 0.9rem;
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .friend-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .friend-action-btn {
+    background-color: var(--zinc-700);
+    color: var(--star-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .friend-action-btn:hover {
+    background-color: var(--neon-purple);
+  }
+  
+  /* Multiplayer Events */
+  .multiplayer-events {
+    margin-bottom: 3rem;
+  }
+  
+  .event-carousel {
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem 0;
+    gap: 1.5rem;
+  }
+  
+  .event-card {
+    background: linear-gradient(135deg, var(--zinc-400), var(--zinc-900));
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px #009ea3;
+  }
+  
+  .event-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .event-description {
+    font-size: 0.9rem;
+    color: var(--nebula-gray);
+    margin-bottom: 1rem;
+  }
+  
+  .event-date {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: #1E536E;
+    font-weight: bold;
+  }
+  
+  .event-participants {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .participant-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .participant-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .participant-count {
+    font-size: 0.8rem;
+    color: var(--nebula-gray);
+  }
+  
+  /* Animations */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .friend-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .friend-stats {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  
+    .friend-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .friend-stats,
+    .friend-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .event-carousel {
+      flex-direction: column;
+    }
+  
+    .event-card {
+      min-width: auto;
+    }
+  }
+  
+  

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Cosmic Achievements</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="achievements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark">
+    <div class="dashboard">
+        <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    
+        <nav id="mobile-nav" class="mobile-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+                <li><a href="friends.html"><i class="fas fa-users"></i> Friends</a></li>
+                <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <span class="logo-text">NEXUS</span>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="games.html">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Games</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="achievements.html">
+                            <i class="fas fa-trophy"></i>
+                            <span>Achievements</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="friends.html">
+                            <i class="fas fa-users"></i>
+                            <span>Friends</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="https://placehold.co/100x100" alt="User Avatar">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Cosmic Player</span>
+                        <span class="user-level">Nebula Master</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 class="page-title">Cosmic Achievements</h1>
+                <div class="header-actions">
+                    <div class="achievement-progress">
+                        <span class="progress-text">Total Progress: 68%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68%;"></div>
+                        </div>
+                    </div>
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-indicator"></span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-wrapper achievements-page">
+                <section class="achievement-overview">
+                    <div class="achievement-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-star"></i></div>
+                            <div class="stat-info">
+                                <h3>Total Achievements</h3>
+                                <p>247 / 500</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="stat-info">
+                                <h3>Rare Achievements</h3>
+                                <p>15</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                            <div class="stat-info">
+                                <h3>Recent Unlock</h3>
+                                <p>2 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="achievement-showcase">
+                    <h2 class="section-title">Latest Achievements</h2>
+                    <div class="showcase-grid">
+                        <!-- Achievement cards will be dynamically added here -->
+                    </div>
+                </section>
+
+                <section class="achievement-categories">
+                    <h2 class="section-title">Achievement Categories</h2>
+                    <div class="category-grid">
+                        <div class="category-card" data-category="combat">
+                            <i class="fas fa-fist-raised"></i>
+                            <h3>Combat</h3>
+                            <p>72% Complete</p>
+                        </div>
+                        <div class="category-card" data-category="exploration">
+                            <i class="fas fa-compass"></i>
+                            <h3>Exploration</h3>
+                            <p>58% Complete</p>
+                        </div>
+                        <div class="category-card" data-category="social">
+                            <i class="fas fa-users"></i>
+                            <h3>Social</h3>
+                            <p>45% Complete</p>
+                        </div>
+                        <div class="category-card" data-category="crafting">
+                            <i class="fas fa-hammer"></i>
+                            <h3>Crafting</h3>
+                            <p>80% Complete</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="achievement-timeline">
+                    <h2 class="section-title">Achievement Timeline</h2>
+                    <div class="timeline-container">
+                        <!-- Timeline items will be dynamically added here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="achievements.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

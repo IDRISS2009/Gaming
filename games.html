@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Games Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark">
+    <div class="dashboard">
+        <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    
+        <nav id="mobile-nav" class="mobile-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+                <li><a href="friends.html"><i class="fas fa-users"></i> Friends</a></li>
+                <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <div class="logo">
+              <div class="logo-icon">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <span class="logo-text">NEXUS</span>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          
+          <nav class="sidebar-menu">
+            <ul>
+              <li class="active">
+                <a href="index.html">
+                  <i class="fas fa-home"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="games.html">
+                  <i class="fas fa-gamepad"></i>
+                  <span>Games</span>
+                </a>
+              </li>
+              <li>
+                <a href="achievements.html">
+                  <i class="fas fa-trophy"></i>
+                  <span>Achievements</span>
+                </a>
+              </li>
+              <li>
+                <a href="friends.html">
+                  <i class="fas fa-users"></i>
+                  <span>Friends</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-cog"></i>
+                  <span>Settings</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          
+          <div class="sidebar-footer">
+            <div class="user-profile">
+              <div class="avatar">
+                <img src="https://placehold.co/40x40" alt="User Avatar">
+              </div>
+              <div class="user-info">
+                <span class="user-name">John Doe</span>
+                <span class="user-level">Level 42</span>
+              </div>
+              <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search games...">
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-indicator"></span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-wrapper games-page">
+                <section class="hero-section">
+                    <div class="hero-content">
+                        <h1>Featured Game</h1>
+                        <h2>Cyberpunk 2077: Phantom Liberty</h2>
+                        <p>Dive into the neon-soaked streets of Night City in this thrilling expansion.</p>
+                        <button class="cta-button">Play Now</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://placehold.co/600x400" alt="Cyberpunk 2077: Phantom Liberty">
+                    </div>
+                </section>
+
+                <section class="game-of-the-day">
+                    <h2>Game of the Day</h2>
+                    <div class="gotd-content">
+                        <div class="gotd-image">
+                            <img src="https://placehold.co/300x200" alt="Elden Ring">
+                        </div>
+                        <div class="gotd-info">
+                            <h3>Elden Ring</h3>
+                            <p>Embark on an epic journey through the Lands Between, a realm of wonder and peril.</p>
+                            <div class="gotd-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>1.2M Players</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9 Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Game of the Year</span>
+                                </div>
+                            </div>
+                            <button class="play-button">Play Now</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="games-library">
+                    <div class="library-header">
+                        <h2>Games Library</h2>
+                        <div class="library-actions">
+                            <div class="filter-dropdown">
+                                <button class="filter-btn">
+                                    Filter <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="filter-content">
+                                    <a href="#" data-filter="all">All Games</a>
+                                    <a href="#" data-filter="action">Action</a>
+                                    <a href="#" data-filter="rpg">RPG</a>
+                                    <a href="#" data-filter="strategy">Strategy</a>
+                                    <a href="#" data-filter="sports">Sports</a>
+                                </div>
+                            </div>
+                            <div class="sort-dropdown">
+                                <button class="sort-btn">
+                                    Sort <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="sort-content">
+                                    <a href="#" data-sort="name">Name</a>
+                                    <a href="#" data-sort="rating">Rating</a>
+                                    <a href="#" data-sort="release">Release Date</a>
+                                    <a href="#" data-sort="popularity">Popularity</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="games-grid">
+                        <!-- Game cards will be dynamically inserted here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>
+
