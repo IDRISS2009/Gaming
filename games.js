@@ -1,32 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Sample game data (in a real application, this would come from a backend)
   const games = [
-    { id: 1, title: "Elden Ring", genre: "Action RPG", rating: 4.9, image: "https://placehold.co/300x200" },
+    { id: 1, title: "Elden Ring", genre: "Action RPG", rating: 4.9, image: "elden_img.jpeg" },
     {
       id: 2,
       title: "God of War: Ragnarök",
       genre: "Action-Adventure",
       rating: 4.8,
-      image: "https://placehold.co/300x200",
+      image: "ragnarok.jpeg",
     },
-    { id: 3, title: "Hades", genre: "Roguelike", rating: 4.7, image: "https://placehold.co/300x200" },
-    { id: 4, title: "Stardew Valley", genre: "Simulation", rating: 4.8, image: "https://placehold.co/300x200" },
+    { id: 3, title: "Hades", genre: "Roguelike", rating: 4.7, image: "hades.jpeg" },
+    { id: 4, title: "Stardew Valley", genre: "Simulation", rating: 4.8, image: "valley.jpeg" },
     {
       id: 5,
       title: "Red Dead Redemption 2",
       genre: "Action-Adventure",
       rating: 4.9,
-      image: "https://placehold.co/300x200",
+      image: "red.jpeg",
     },
-    { id: 6, title: "Hollow Knight", genre: "Metroidvania", rating: 4.7, image: "https://placehold.co/300x200" },
+    { id: 6, title: "Hollow Knight", genre: "Metroidvania", rating: 4.7, image: "hollow.jpeg" },
     {
       id: 7,
       title: "The Witcher 3: Wild Hunt",
       genre: "Action RPG",
       rating: 4.9,
-      image: "https://placehold.co/300x200",
+      image: "witcher.jpeg",
     },
-    { id: 8, title: "Disco Elysium", genre: "RPG", rating: 4.8, image: "https://placehold.co/300x200" },
+    { id: 8, title: "Disco Elysium", genre: "RPG", rating: 4.8, image: "disco.jpeg" },
     // Add more games as needed
   ]
 

@@ -33,22 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         progress: 100,
         category: "combat",
       },
-      {
-        id: 5,
-        title: "Fleet Admiral",
-        description: "Command a fleet of 100 ships",
-        icon: "fas fa-space-shuttle",
-        progress: 80,
-        category: "combat",
-      },
-      {
-        id: 6,
-        title: "Xenolinguist",
-        description: "Learn 20 alien languages",
-        icon: "fas fa-language",
-        progress: 40,
-        category: "social",
-      },
+
     ]
   
     // Sample timeline data
